@@ -43,11 +43,8 @@ public class dealpage
   By SelectCity = By.id("provinceSelection");
   By msisdnbutton = By.xpath("//*[@id=\"providerModalBody\"]/div[2]");
   By Imei = By.id("imei");
-  
   By Registration = By.id("registrationNumber");
   
-
-
 
   public dealpage(WebDriver driver)
   {
@@ -97,43 +94,18 @@ public class dealpage
     
     boolean providerspecificinfo = driver.findElement(msisdnbutton).isDisplayed();
     
-
-
-
-
-
     if (providerspecificinfo)
     {
       MSSIDNProviderspecific();
-
-
-
-
-
-
-
-
     }
     else
     {
-
-
-
-
-
-
-
-
       System.out.println("Test");
-    }
-    
+    } 
     driver.findElement(saveorder).click();
     Thread.sleep(2000L);
-    
-
     String id1 = driver.findElement(idnumber).getText();
-    Thread.sleep(3000L);
-    
+    Thread.sleep(3000L);   
     driver.findElement(customercare).click();
     Thread.sleep(2000L);
     driver.findElement(searchcustomer).click();
@@ -147,8 +119,7 @@ public class dealpage
     Thread.sleep(2000L);
     driver.findElement(ordertab).click();
     Thread.sleep(3000L);
-  }
-  
+  } 
   private void MSSIDNProviderspecific()
     throws InterruptedException
   {

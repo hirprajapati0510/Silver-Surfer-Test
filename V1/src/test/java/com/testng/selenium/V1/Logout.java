@@ -14,7 +14,8 @@ public class Logout {
           this.driver = driver;
 	}
 	
-	public void clickLogout() {
+	public void clickLogout() throws InterruptedException
+	{
 		driver.findElement(Profile).click();
 		driver.findElement(logout).click();
 	}

@@ -11,6 +11,7 @@ import com.testng.selenium.V1.dealpage;
 import com.testng.selenium.V1.disposationpage;
 import com.testng.selenium.V1.loginpage;
 import com.testng.selenium.V1.menupage;
+import com.testng.selenium.V1.Logout;
 
 public class verifytestcases
 {
@@ -26,7 +27,6 @@ public class verifytestcases
     driver.manage().window().maximize();
     driver.get(env);
   }
-  
 
   @Test(priority=1)
   public void verifyvalidlogin()
@@ -74,6 +74,12 @@ public class verifytestcases
     dealpage deal = new dealpage(driver);
     deal.verifydealpage(providertyp, providername);
   }
+  @Test(priority=8)
+  public void verifylogout() throws InterruptedException {
+	  Logout logout = new Logout(driver);
+	  logout.clickLogout();
+  }
+  
   
   @AfterClass
   public void closeoff()
