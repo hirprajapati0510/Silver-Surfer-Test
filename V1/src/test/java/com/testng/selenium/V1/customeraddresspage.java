@@ -37,13 +37,13 @@ public class customeraddresspage
     Thread.sleep(2000L);
     driver.findElement(check).click();
     Thread.sleep(2000L);
-    driver.findElement(searching).sendKeys(new CharSequence[] { search });
+    driver.findElement(searching).sendKeys("search");
     Thread.sleep(3000L);
     
     driver.findElement(searchbox).click();
     Thread.sleep(2000L);
-    driver.findElement(searchbox).sendKeys(new CharSequence[] { Keys.DOWN });
-    driver.findElement(searchbox).sendKeys(new CharSequence[] { Keys.ENTER });
+    driver.findElement(searchbox).sendKeys(Keys.DOWN);
+    driver.findElement(searchbox).sendKeys(Keys.ENTER);
     Thread.sleep(2000L);
     
     driver.findElement(saveaddress1).click();
@@ -62,7 +62,7 @@ public class customeraddresspage
     String day = RandomStringUtils.random(2, date);
     String yr = "23";
     String year = RandomStringUtils.random(4, yr);
-    driver.findElement(dateselect).sendKeys(new CharSequence[] { year + "-" + month + "-" + day });
+    driver.findElement(dateselect).sendKeys( year + "-" + month + "-" + day);
     driver.findElement(saveaddress1).click();
   }
 }

@@ -63,26 +63,25 @@ public class dealpage
   {
     driver.findElement(DealDetails).click();
     
-
     Select providertype = new Select(driver.findElement(SelectProviderType));
     providertype.selectByVisibleText(providertyp);
     
     Select provider = new Select(driver.findElement(SelectProvider));
     provider.selectByVisibleText(providername);
     
-    driver.findElement(SelectDeal).sendKeys(new CharSequence[] { Keys.DOWN });
+    driver.findElement(SelectDeal).sendKeys(Keys.DOWN);
     Thread.sleep(2000L);
     
 
     Thread.sleep(5000L);
     
-    driver.findElement(AccountNo).sendKeys(new CharSequence[] { randomacctnumber });
+    driver.findElement(AccountNo).sendKeys(randomacctnumber);
     Select bank = new Select(driver.findElement(Bank));
     bank.selectByVisibleText("BIDVEST BANK");
     Select branch = new Select(driver.findElement(Bankbranch));
     branch.selectByVisibleText("BIDVEST BANK (GENERIC)");
     
-    driver.findElement(Accountholder).sendKeys(new CharSequence[] { acctname });
+    driver.findElement(Accountholder).sendKeys(acctname);
     Select acctype = new Select(driver.findElement(Accounttype));
     acctype.selectByVisibleText("Current");
     Select debitdte = new Select(driver.findElement(Debitday));
@@ -110,7 +109,7 @@ public class dealpage
     Thread.sleep(2000L);
     driver.findElement(searchcustomer).click();
     Thread.sleep(2000L);
-    driver.findElement(ordersearch).sendKeys(new CharSequence[] { id1 });
+    driver.findElement(ordersearch).sendKeys(id1);
     driver.findElement(Customersreach).click();
     Thread.sleep(2000L);
     driver.findElement(Submitsearch).click();
@@ -124,7 +123,7 @@ public class dealpage
     throws InterruptedException
   {
     Thread.sleep(2000L);
-    driver.findElement(MSISDN).sendKeys(new CharSequence[] { phNo });
+    driver.findElement(MSISDN).sendKeys(phNo);
     Thread.sleep(2000L);
     driver.findElement(SaveProviderSpecific).click();
     Thread.sleep(2000L);

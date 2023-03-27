@@ -9,12 +9,10 @@ public class disposationpage
   WebDriver driver;
   By disposition = By.id("dispositionTab");
   By ordervoicerecord = By.id("WavRecording");
-  String randomordervoice = RandomStringUtils.randomNumeric(8);
   By Dialerlead = By.id("DialerLeadReference");
+  String randomordervoice = RandomStringUtils.randomNumeric(8);
   String randomdialerlead = RandomStringUtils.randomAlphabetic(6);
   
-
-
   public disposationpage(WebDriver driver)
   {
     this.driver = driver;
@@ -24,7 +22,7 @@ public class disposationpage
     throws InterruptedException
   {
     driver.findElement(disposition).click();
-    driver.findElement(ordervoicerecord).sendKeys(new CharSequence[] { randomordervoice });
-    driver.findElement(Dialerlead).sendKeys(new CharSequence[] { randomdialerlead });
+    driver.findElement(ordervoicerecord).sendKeys("randomordervoice");
+    driver.findElement(Dialerlead).sendKeys("randomdialerlead");
   }
 }

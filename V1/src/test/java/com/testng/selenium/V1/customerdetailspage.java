@@ -34,22 +34,22 @@ public class customerdetailspage
     driver.findElement(custdetails).click();
     Select title = new Select(driver.findElement(By.id("customerTitles")));
     title.selectByVisibleText("Mrs");
-    driver.findElement(custname).sendKeys(new CharSequence[] { fname });
+    driver.findElement(custname).sendKeys("fname");
     String sname = RandomStringUtils.randomAlphabetic(8);
-    driver.findElement(surename).sendKeys(new CharSequence[] { sname });
+    driver.findElement(surename).sendKeys(sname);
     driver.findElement(passportredio).click();
     driver.findElement(passportno).click();
-    driver.findElement(enterrandompass).sendKeys(new CharSequence[] { randompassport });
+    driver.findElement(enterrandompass).sendKeys("randompassport");
     
     Select education = new Select(driver.findElement(By.id("levelOfEducation")));
     education.selectByVisibleText("Advanced");
     String randomNumbe = RandomStringUtils.randomNumeric(9);
     String phNo = 0 + randomNumbe;
-    driver.findElement(Contactno1).sendKeys(new CharSequence[] { phNo });
+    driver.findElement(Contactno1).sendKeys(phNo);
     
     Random randomGenerator = new Random();
     int randomInt = randomGenerator.nextInt(1000);
-    driver.findElement(email).sendKeys(new CharSequence[] { "order" + randomInt + "@yopmail.com" });
+    driver.findElement(email).sendKeys("order" + randomInt + "@yopmail.com");
     driver.findElement(leadauth).click();
     driver.findElement(spot).click();
   }
