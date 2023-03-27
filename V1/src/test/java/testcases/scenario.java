@@ -20,6 +20,7 @@ public class scenario
 	options.addArguments("--remote-allow-origins=*");
 
 	WebDriver driver = new ChromeDriver(options);
+	//maximize window
 	driver.manage().window().maximize();
 	driver.get("http://t2.silversurfer.ignitiongroup.co.za/");
 	
