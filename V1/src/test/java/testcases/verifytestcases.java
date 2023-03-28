@@ -18,7 +18,6 @@ public class verifytestcases
   WebDriver driver;
   
   public verifytestcases() {}
-  
   @Parameters({"env"})
   @org.testng.annotations.BeforeClass
   public void setup(String env)
